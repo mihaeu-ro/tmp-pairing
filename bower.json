@@ -1,23 +1,15 @@
 {
-  "name": "tmp-pairing",
+  "name": "angular-seed",
+  "description": "A starter project for AngularJS",
   "version": "0.0.0",
-  "homepage": "https://github.com/mihaeu/tmp-pairing",
-  "authors": [
-    "Michael Haeuslmann <haeuslmann@gmail.com>"
-  ],
-  "description": "",
-  "main": "",
-  "moduleType": [],
+  "homepage": "https://github.com/angular/angular-seed",
   "license": "MIT",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
+  "private": true,
   "dependencies": {
-    "angular": "1.4.7",
-    "underscore": "~1.8.3"
+    "angular": "~1.4.0",
+    "angular-route": "~1.4.0",
+    "angular-loader": "~1.4.0",
+    "angular-mocks": "~1.4.0",
+    "html5-boilerplate": "~5.2.0"
   }
 }
