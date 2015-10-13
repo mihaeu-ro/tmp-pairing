@@ -23,6 +23,20 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// DB setup
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/test');
+var Game = mongoose.model('Game', {
+  cardsTurned: Number,
+  foundCards: Number,
+  cards: [{
+    value: Number,
+    isFaceUp: Boolean,
+    isSolved: Boolean
+  }]
+});
+
+// Routes
 app.use('/', routes);
 
 app.get('/api', function(req, res) {
@@ -30,10 +44,14 @@ app.get('/api', function(req, res) {
 });
 
 app.post('/click', function(req, res) {
-  var mongoose = require('mongoose');
-  // mongoose.connect('mongodb://localhost/test');
+  console.log(req.param('game'));
+  var mongoose = new Game(req.param('game'));
+  mongoose.save(function (err) {
+  if (err) {
+    console.log(err);
+  }
+});
 
-  console.log(req.param('card'));
 });
 
 // catch 404 and forward to error handler

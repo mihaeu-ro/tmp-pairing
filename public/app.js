@@ -29,7 +29,7 @@ app.controller('MemoryController', ['$http', function($http) {
     });
 
     memory.turnCard = function(card) {
-      $http.post('/click', {'card':card.value});
+      $http.post('/click', {'game':memory.game});
 
       if (card.isSolved) {
       	return;
