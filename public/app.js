@@ -63,5 +63,11 @@ app.controller('MemoryController', ['$http', function($http) {
     	  card.isFaceUp = false;
     	}
       });
+    };
+
+    memory.loadgame = function() {
+      $http.get('/loadgame').success(function (data) {
+        memory.game = data;
+      });
     }
 }]);
