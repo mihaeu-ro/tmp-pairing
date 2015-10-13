@@ -6,7 +6,6 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
 
 var app = express();
 
@@ -23,36 +22,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// DB setup
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/test');
-var Game = mongoose.model('Game', {
-  cardsTurned: Number,
-  foundCards: Number,
-  cards: [{
-    value: Number,
-    isFaceUp: Boolean,
-    isSolved: Boolean
-  }]
-});
-
 // Routes
 app.use('/', routes);
-
-app.get('/api', function(req, res) {
-  res.json({ pairs: 8 });
-});
-
-app.post('/click', function(req, res) {
-  console.log(req.param('game'));
-  var mongoose = new Game(req.param('game'));
-  mongoose.save(function (err) {
-  if (err) {
-    console.log(err);
-  }
-});
-
-});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

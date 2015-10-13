@@ -51,7 +51,7 @@ app.controller('MemoryController', ['$http', function($http) {
         if (otherCard.value === card.value && otherCard.isFaceUp) {
         	card.isSolved = true;
         	otherCard.isSolved = true;
-        	memory.foundCards++;
+        	memory.game.foundCards++;
         }
       });
     };
