@@ -8,6 +8,17 @@ Powered by Angular Seed.
 git clone https://github.com/mihaeu/tmp-pairing
 cd tmp-pairing
 
+# install dependencies (Node v0.12.7, Bower 2.11.3)
+npm install
+bower install
+
+# start server
+npm start
+
+# or: if you have nodemon installed (npm install -g nodemon)
+# nodemon bin/www
+```
+
 ## To Do
 
  - Clean up (directive for card)

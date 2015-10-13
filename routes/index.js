@@ -17,10 +17,7 @@ var Game = mongoose.model('Game', {
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-  Game.count(function(err, result) {
-  	console.log('COUNT ' + result);
-  });
+  res.render('index');
 });
 
 router.get('/api', function(req, res) {
@@ -29,7 +26,9 @@ router.get('/api', function(req, res) {
 
 router.get('/loadgame', function(req, res) {
   Game.findOne().sort({foundCards: -1}).exec(function (err, result) {
-  	res.json(result);
+    var game = result;
+    result._id = null;
+  	res.json(game);
   });
 });
 
@@ -39,8 +38,6 @@ router.post('/click', function(req, res) {
   mongoose.save(function (err) {
     if (err) {
       console.log(err);
-    } else {
-    	console.log('Maaarkus!');
     }
   });
 });
