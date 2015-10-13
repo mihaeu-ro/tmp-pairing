@@ -2,6 +2,25 @@
 
 Powered by Angular Seed.
 
+## Getting started
+
+```bash
+git clone https://github.com/mihaeu/tmp-pairing
+cd tmp-pairing
+
+## To Do
+
+ - Clean up (directive for card)
+ - Jasmine and Karma
+
+# install node and bower requirements
+npm install
+bower install
+
+# start localhost:3000
+npm start
+```
+
 ## Idea
 
 ![Idea](doc/idea.png)

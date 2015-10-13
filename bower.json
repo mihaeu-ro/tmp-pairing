@@ -1,6 +1,6 @@
 {
-  "name": "public",
-  "version": "0.0.0",
+  "name": "tmp-pairing",
+  "version": "0.1.0",
   "homepage": "https://github.com/mihaeu/tmp-pairing",
   "authors": [
     "Michael Haeuslmann <haeuslmann@gmail.com>"
