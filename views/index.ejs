@@ -16,12 +16,12 @@
 </head>
 <body ng-controller="MemoryController as memory">
   <h1>Memory</h1>
-  <h2>Gefundene Pärchen: {{memory.foundCards}} von {{ memory.cards.length / 2 }}</h2>
+  <h2>Gefundene Pärchen: {{memory.game.foundCards}} von {{ memory.game.cards.length / 2 }}</h2>
 
   <ul class="card-box">
     <li class="card" ng-class="{'face-up':card.isFaceUp, 'face-down':!card.isFaceUp, 
     'solved':card.isSolved}"
-        ng-repeat="card in memory.cards track by $index"
+        ng-repeat="card in memory.game.cards track by $index"
         ng-click="memory.turnCard(card)"
     >
       {{card.value}}

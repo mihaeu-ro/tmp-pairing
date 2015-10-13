@@ -19,6 +19,7 @@
   ],
   "dependencies": {
     "angular": "angularjs#~1.4.7",
-    "underscore": "~1.8.3"
+    "underscore": "~1.8.3",
+    "html5-boilerplate": "~5.2.0"
   }
 }
