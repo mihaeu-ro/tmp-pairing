@@ -24,14 +24,6 @@ npm start
  - Clean up (directive for card)
  - Jasmine and Karma
 
-# install node and bower requirements
-npm install
-bower install
-
-# start localhost:3000
-npm start
-```
-
 ## Idea
 
 ![Idea](doc/idea.png)
