@@ -1,0 +1,24 @@
+{
+  "name": "public",
+  "version": "0.0.0",
+  "homepage": "https://github.com/mihaeu/tmp-pairing",
+  "authors": [
+    "Michael Haeuslmann <haeuslmann@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#~1.4.7",
+    "underscore": "~1.8.3"
+  }
+}
